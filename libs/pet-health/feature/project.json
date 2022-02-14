@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/pet-health/feature",
+  "sourceRoot": "libs/pet-health/feature/src",
+  "prefix": "lazy-dashboard",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/pet-health/feature"],
+      "options": {
+        "jestConfig": "libs/pet-health/feature/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/pet-health/feature/src/**/*.ts",
+          "libs/pet-health/feature/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

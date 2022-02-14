@@ -1,6 +1,13 @@
 {
   "version": 2,
   "projects": {
+    "dashboard-feature": "libs/dashboard/feature",
+    "e-shop-data": "libs/e-shop/data",
+    "e-shop-feature": "libs/e-shop/feature",
+    "hotel-data": "libs/hotel/data",
+    "hotel-feature": "libs/hotel/feature",
+    "pet-health-data": "libs/pet-health/data",
+    "pet-health-feature": "libs/pet-health/feature",
     "web": "apps/web",
     "web-e2e": "apps/web-e2e"
   }

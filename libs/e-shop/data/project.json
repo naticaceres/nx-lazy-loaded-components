@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/e-shop/data",
+  "sourceRoot": "libs/e-shop/data/src",
+  "prefix": "lazy-dashboard",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/e-shop/data"],
+      "options": {
+        "jestConfig": "libs/e-shop/data/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/e-shop/data/src/**/*.ts",
+          "libs/e-shop/data/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
