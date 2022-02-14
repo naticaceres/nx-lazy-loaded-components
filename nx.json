@@ -1,11 +1,18 @@
 {
-  "extends": "@nrwl/workspace/presets/core.json",
-  "npmScope": "nx-lazy-games",
+  "npmScope": "lazy-dashboard",
   "affected": {
     "defaultBase": "master"
   },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
+    "defaultCollection": "@nrwl/angular",
+    "packageManager": "npm"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
   },
   "tasksRunnerOptions": {
     "default": {
@@ -17,8 +24,32 @@
           "test",
           "e2e"
         ],
-        "accessToken": "MzE5N2U3MTUtYzJiNi00ODBkLWFlMTEtYWMzMjJjMzAyYzJkfHJlYWQtd3JpdGU="
+        "accessToken": "MWU4YmI0NDMtOGZjMi00YWRiLTliNjctZjIzMzY3ZDZiYjQ4fHJlYWQtd3JpdGU="
       }
     }
-  }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "generators": {
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
+    }
+  },
+  "defaultProject": "web"
 }
