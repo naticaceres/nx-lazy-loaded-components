@@ -18,12 +18,7 @@
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
         "accessToken": "MWU4YmI0NDMtOGZjMi00YWRiLTliNjctZjIzMzY3ZDZiYjQ4fHJlYWQtd3JpdGU="
       }
     }
@@ -49,6 +44,10 @@
     },
     "@nrwl/angular:component": {
       "style": "scss"
+    },
+    "@schematics/angular:component": {
+      "style": "scss",
+      "changeDetection": "OnPush"
     }
   },
   "defaultProject": "web"

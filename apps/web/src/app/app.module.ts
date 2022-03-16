@@ -6,6 +6,7 @@ import { StoreModule } from '@ngrx/store';
 import { NxModule } from '@nrwl/angular';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +24,7 @@ import { environment } from '../environments/environment';
       }
     ),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
+    AppRoutingModule,
   ],
   bootstrap: [AppComponent],
 })
