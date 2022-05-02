@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/hotel/widget",
+  "sourceRoot": "libs/hotel/widget/src",
+  "prefix": "lazy-dashboard",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/hotel/widget"],
+      "options": {
+        "jestConfig": "libs/hotel/widget/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/hotel/widget/src/**/*.ts",
+          "libs/hotel/widget/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

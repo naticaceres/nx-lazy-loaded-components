@@ -22,6 +22,7 @@
       "@lazy-dashboard/e-shop/feature": ["libs/e-shop/feature/src/index.ts"],
       "@lazy-dashboard/hotel/data": ["libs/hotel/data/src/index.ts"],
       "@lazy-dashboard/hotel/feature": ["libs/hotel/feature/src/index.ts"],
+      "@lazy-dashboard/hotel/widget": ["libs/hotel/widget/src/index.ts"],
       "@lazy-dashboard/pet-health/data": ["libs/pet-health/data/src/index.ts"],
       "@lazy-dashboard/pet-health/feature": [
         "libs/pet-health/feature/src/index.ts"

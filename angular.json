@@ -6,6 +6,7 @@
     "e-shop-feature": "libs/e-shop/feature",
     "hotel-data": "libs/hotel/data",
     "hotel-feature": "libs/hotel/feature",
+    "hotel-widget": "libs/hotel/widget",
     "pet-health-data": "libs/pet-health/data",
     "pet-health-feature": "libs/pet-health/feature",
     "web": "apps/web",
