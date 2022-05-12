@@ -14,6 +14,7 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
+    "noPropertyAccessFromIndexSignature": false,
     "paths": {
       "@lazy-dashboard/dashboard/feature": [
         "libs/dashboard/feature/src/index.ts"
