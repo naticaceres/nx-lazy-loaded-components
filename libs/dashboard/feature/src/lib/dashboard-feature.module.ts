@@ -5,8 +5,6 @@ import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   imports: [CommonModule, DashboardFeatureRoutingModule],
-  declarations: [
-    LandingComponent
-  ],
+  declarations: [LandingComponent],
 })
 export class DashboardFeatureModule {}

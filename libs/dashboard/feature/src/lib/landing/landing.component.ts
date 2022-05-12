@@ -35,8 +35,6 @@ export class LandingComponent implements AfterViewInit {
     this.createDynamicComponent('something');
   }
 
-
-
   async createDynamicComponent(context: any) {
     console.log('This is createView');
     setTimeout(async () => {
@@ -49,7 +47,6 @@ export class LandingComponent implements AfterViewInit {
       componentRef.instance.ngOnInit();
       componentRef.instance.hotelName = 'my hotel';
       componentRef.injector.get(ChangeDetectorRef).markForCheck();
-    }, 500)
-
+    }, 500);
   }
 }

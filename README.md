@@ -4,9 +4,6 @@ https://www.angulararchitects.io/aktuelles/angulars-future-without-ngmodules-lig
 
 https://stackblitz.com/edit/angular-ivy-p324kb?file=src%2Fapp%2Fdynamic-demo%2Fdynamic.component.html
 
-
-
-
 # LazyDashboard
 
 This project was generated using [Nx](https://nx.dev).
@@ -93,11 +90,6 @@ Run `nx graph` to see a diagram of the dependencies of your projects.
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
-
-
-
-
-
 
 ## ☁ Nx Cloud
 

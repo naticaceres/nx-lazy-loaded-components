@@ -5,8 +5,6 @@ import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   imports: [CommonModule, EShopFeatureRoutingModule],
-  declarations: [
-    LandingComponent
-  ],
+  declarations: [LandingComponent],
 })
 export class EShopFeatureModule {}

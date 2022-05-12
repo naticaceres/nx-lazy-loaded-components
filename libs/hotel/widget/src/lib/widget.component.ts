@@ -1,4 +1,12 @@
-import { Component, ChangeDetectionStrategy, Input, OnChanges, SimpleChanges, OnInit, ɵdetectChanges } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  Input,
+  OnChanges,
+  SimpleChanges,
+  OnInit,
+  ɵdetectChanges,
+} from '@angular/core';
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -6,7 +14,7 @@ import { CommonModule } from '@angular/common';
 enum PetType {
   dog,
   cat,
-  bird
+  bird,
 }
 
 @Component({
@@ -15,17 +23,17 @@ enum PetType {
   styleUrls: ['./widget.component.scss'],
   //changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class WidgetComponent  implements OnChanges, OnInit{
+export class WidgetComponent implements OnChanges, OnInit {
   @Input() petType!: PetType;
-  @Input() hotelName = "noName"
+  @Input() hotelName = 'noName';
 
   ngOnInit(): void {
-    console.log("this is hotelWidget onInit");
+    console.log('this is hotelWidget onInit');
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if(changes.hotelName.currentValue){
-      console.log("this is onChanges in hotelWidget" , changes)
+    if (changes.hotelName.currentValue) {
+      console.log('this is onChanges in hotelWidget', changes);
     }
   }
 }
@@ -33,8 +41,6 @@ export class WidgetComponent  implements OnChanges, OnInit{
 @NgModule({
   imports: [CommonModule],
   declarations: [WidgetComponent],
-  exports: [WidgetComponent]
+  exports: [WidgetComponent],
 })
-export class HotelWidgetModule{
-
-}
+export class HotelWidgetModule {}
