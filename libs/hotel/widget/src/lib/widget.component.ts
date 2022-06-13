@@ -1,11 +1,10 @@
 import {
   Component,
-  ChangeDetectionStrategy,
   Input,
   OnChanges,
   SimpleChanges,
   OnInit,
-  ɵdetectChanges,
+  ChangeDetectorRef,
 } from '@angular/core';
 
 import { NgModule } from '@angular/core';
@@ -21,11 +20,12 @@ enum PetType {
   selector: 'lazy-dashboard-widget',
   templateUrl: './widget.component.html',
   styleUrls: ['./widget.component.scss'],
-  //changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WidgetComponent implements OnChanges, OnInit {
   @Input() petType!: PetType;
   @Input() hotelName = 'noName';
+
+  constructor(public cdRef: ChangeDetectorRef) {}
 
   ngOnInit(): void {
     console.log('this is hotelWidget onInit');

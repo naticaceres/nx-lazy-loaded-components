@@ -7,6 +7,7 @@ import {
   createNgModuleRef,
   AfterViewInit,
   ChangeDetectorRef,
+  OnInit,
 } from '@angular/core';
 
 export interface HotelStay {
@@ -19,9 +20,9 @@ export interface HotelStay {
   selector: 'lazy-dashboard-landing',
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  //changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LandingComponent implements AfterViewInit {
+export class LandingComponent implements OnInit {
   @ViewChild('dynamicTemplateRef', { read: TemplateRef })
   dynamicTemplateRef!: TemplateRef<any>;
   @ViewChild('dynamicViewContainer', { read: ViewContainerRef })
@@ -31,22 +32,21 @@ export class LandingComponent implements AfterViewInit {
     { component: 'widget', library: '@lazy-dashboard/hotel/widget' },
   ];
 
-  ngAfterViewInit(): void {
-    this.createDynamicComponent('something');
+  ngOnInit(): void {
+    this.createDynamicComponent();
   }
 
-  async createDynamicComponent(context: any) {
+  async createDynamicComponent() {
     console.log('This is createView');
-    setTimeout(async () => {
-      const lazyComponent = await import('@lazy-dashboard/hotel/widget');
-      const ngModuleRef = createNgModuleRef(lazyComponent.HotelWidgetModule);
-      const componentRef = this.dynamicViewContainerRef.createComponent(
-        lazyComponent.WidgetComponent,
-        { ngModuleRef: ngModuleRef }
-      );
-      componentRef.instance.ngOnInit();
-      componentRef.instance.hotelName = 'my hotel';
-      componentRef.injector.get(ChangeDetectorRef).markForCheck();
-    }, 500);
+    const lazyComponent = await import('@lazy-dashboard/hotel/widget');
+    const ngModuleRef = createNgModuleRef(lazyComponent.HotelWidgetModule);
+    const componentRef = this.dynamicViewContainerRef.createComponent(
+      lazyComponent.WidgetComponent,
+      { ngModuleRef }
+    );
+    componentRef.instance.hotelName = 'THIS IS THE INPUT PROPERTY';
+    // if OnPush CD is on, it won't detect changes set imperatively to the child component.
+    // therefore if OnPush is needed, this line below is needed too.
+    //componentRef.injector.get(ChangeDetectorRef).markForCheck(); // this is my problem
   }
 }

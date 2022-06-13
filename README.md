@@ -1,8 +1,18 @@
-sources:
+# Sources:
 
 https://www.angulararchitects.io/aktuelles/angulars-future-without-ngmodules-lightweight-solutions-on-top-of-standalone-components/
 
 https://stackblitz.com/edit/angular-ivy-p324kb?file=src%2Fapp%2Fdynamic-demo%2Fdynamic.component.html
+
+https://github.com/SanderElias/Samples/blob/main/src/app/lazy-component/lazy-component.component.html
+
+# Next Tasks
+- [ ] make environment files globally accessible
+- [ ] add in-memory-API
+- [ ] add scss architecture
+- [ ] style header and footer
+- [ ] style example widget component
+
 
 # LazyDashboard
 
